@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { BasicFlex } from '../style/GenericStyles';
 import land from '../assets/land.jpg';
+import NavBar from '../components/NavBar';
 
 export const IntroContainer = styled(BasicFlex)`
 width:100%;
@@ -26,6 +27,7 @@ export default function Intro(){
         <IntroContainer>
         <pre><code>Violaine Ernotte / ✨ </code></pre>
         <pre><code>Développeur Web junior / 💻</code></pre>
+        <NavBar />
         </IntroContainer>
     )
     }

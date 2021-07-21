@@ -6,8 +6,8 @@ import axios from 'axios';
 
 
 export const BasicInfos = styled.div`
-  width:40rem;  
-  background-color: #1B72BF;
+  width:25rem;  
+  background-color: #F5F7FA;
   height : 15rem;
   text-align: left;
   padding: 10px;

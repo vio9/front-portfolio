@@ -5,6 +5,7 @@ import Formation from './Formation';
 import Intro from './Intro';
 import Skills from './Skills';
 import Experiences from './Experiences';
+import Projects from './Projects';
 
 
 export const UpContainer = styled.div`
@@ -20,17 +21,18 @@ flex-direction:column;
 export default function Home(){
     return(
         <>
-        
           <Intro/>
           <UpContainer>
               <BasicContainer>
             <BasicInfo />
             <Socials />
             <Skills />
+            <Formation />
             </BasicContainer>
             <Experiences />
+            <Projects />
             </UpContainer>
-            <Formation />
+            
             </>
             
         

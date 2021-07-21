@@ -1,14 +1,32 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import { TitleRubrique } from '../style/GenericStyles';
 
 
 export const ExpContainer = styled.div`
 display:flex;
-width:60%;
 flex-direction: column;
 text-align: left;
+background-color: #F2F2F2;
 `;
+
+export const ExpBox = styled.div`
+width:38rem;
+height:25rem;
+background-color:#fff;
+border: 0.5px #e0dddd solid;
+padding:10px;
+margin-left:20px;
+margin-bottom:20px;
+`;
+
+
+export const ImageExp = styled.img`
+width:300px;
+display:block;
+`;
+
 
 export default function Experiences(){
     const [experiences, setExperiences] = useState([])
@@ -41,17 +59,19 @@ export default function Experiences(){
             ) : (
                 experiences.length && (
                     <ExpContainer>
-                        <h2>Expériences professionnelles</h2>
+                        <TitleRubrique>Expériences professionnelles</TitleRubrique>
                         {
                             experiences.map((experience, index) => {
                                 return(
-                                <div key={index}>
+                                <ExpBox key={index}>
+                                     <ImageExp src={experience.image} alt="nespresso" />
                                     <h4>{experience.title}</h4>
                                     <p>{experience.entreprise}</p>
                                     <p>{experience.subtitle}</p>
                                     <p>{experience.description}</p>
                                     <p>{experience.period}</p>
-                                </div>
+                                   
+                                </ExpBox>
                                 )
                             })
                         }

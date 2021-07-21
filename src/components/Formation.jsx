@@ -4,9 +4,10 @@ import styled from 'styled-components';
 
 
 export const FormationContainer = styled.div`
-width:40rem;
-background-color: #5085CC;
-height:20rem;
+width:25rem;
+background-color: #AAB2BD;
+padding: 10px;
+text-align:left;
 
 `;
 

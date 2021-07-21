@@ -4,10 +4,10 @@ import styled from 'styled-components';
 
 
 export const SkillsContainer = styled.div`
-width:40rem;
+width:25rem;
 background-color: #dce3ec;
-
-
+padding: 10px;
+text-align:left;
 `;
 
 export default function Formation(){

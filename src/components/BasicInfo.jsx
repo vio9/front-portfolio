@@ -6,9 +6,11 @@ import axios from 'axios';
 
 
 export const BasicInfos = styled.div`
-  width:40rem;
+  width:40rem;  
   background-color: #1B72BF;
-  height : 20rem;
+  height : 15rem;
+  text-align: left;
+  padding: 10px;
   `;
   
 
@@ -56,16 +58,17 @@ export default function BasicInfo(){
                 infos.length && (
 
                 <div>
+                   
                 {
+                    
                     infos.map((info, index) => {
                         return(
                             <BasicInfos key={index}>
-                        <h3>{info.firstname}</h3>
-                        <h3>{info.lastname}</h3>
-                        <p>{info.email}</p>
-                        <p>{info.city}</p>
-                        <p>{info.presentation}</p>
-                    </BasicInfos>
+                            <p>👋 {info.presentation}</p>
+                            <p>📨 Si vous souhaitez me contacter c'est par ici : <a href={"mailto:" + info.email}>{info.email}</a></p>
+                            <p>Actuellement je travaille à distance et à {info.city}</p>
+                            
+                        </BasicInfos>
                         )
                     
                 })

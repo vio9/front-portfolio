@@ -1,16 +1,10 @@
 import './App.css';
-import BasicInfo from './components/BasicInfo';
-import Socials from './components/Socials';
-import Formation from './components/Formation'
-import Intro from './components/Intro';
+import Home from './components/Home';
 
 function App() {
   return (
     <div className="App">
-      <Intro/>
-      <BasicInfo />
-      <Socials />
-     <Formation />
+    <Home />
     </div>
   );
 }

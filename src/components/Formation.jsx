@@ -39,6 +39,7 @@ if(loading) return <div>loading...</div>
             ) : (
                 formations.length && (
                     <FormationContainer>
+                           <h2>Formation</h2>
                         {
                             formations.map((formation, index) => {
                                 return(

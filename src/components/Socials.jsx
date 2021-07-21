@@ -8,6 +8,8 @@ export const SocialContainer = styled.div`
   width:40rem;
   background-color:#3D90D9;
   height : 10rem;
+  text-align: left;
+  padding: 10px;
   `;
   
 

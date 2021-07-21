@@ -59,7 +59,7 @@ export default function Experiences(){
             ) : (
                 experiences.length && (
                     <ExpContainer>
-                        <TitleRubrique>Expériences professionnelles</TitleRubrique>
+                        <TitleRubrique>👩‍💻 Expériences professionnelles</TitleRubrique>
                         {
                             experiences.map((experience, index) => {
                                 return(

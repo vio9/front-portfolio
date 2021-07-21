@@ -2,8 +2,20 @@ import styled from 'styled-components';
 import { BasicFlex } from '../style/GenericStyles';
 import land from '../assets/land.jpg';
 import NavBar from '../components/NavBar';
+import { devices } from '../style/GenericStyles';
 
 export const IntroContainer = styled(BasicFlex)`
+@media ${devices.mobile} {
+    background-image: url(${land});
+    width:375px;
+    height:400px;
+    font-size:0.9em;
+    color:#fff;
+    padding-top:100px;
+    display:flex;
+    flex-direction: column;
+}
+@media ${devices.laptop} {
 width:100%;
 height:20rem;
 background-image: url(${land});
@@ -19,6 +31,8 @@ flex-direction:column;
     background-image: url(${land});
     filter: grayscale(50%);
 }
+}
+
     
 `;
 

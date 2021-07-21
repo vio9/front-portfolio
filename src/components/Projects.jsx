@@ -59,17 +59,17 @@ export default function Projects(){
             ) : (
                 projects.length && (
                     <ProjectContainer>
-                        <TitleRubrique>Projets Web </TitleRubrique>
+                        <TitleRubrique>🌐 Projets Web </TitleRubrique>
                         {
                             projects.map((project, index) => {
                                 return(
-                                <ProjectBox key={index}>
+                                <ProjectBox id={project.id} key={index}>
                                      <ImageExp src={project.image} alt="logo" />
                                     <h4>{project.title}</h4>
                                     <p>Lien : <a href={project.link}>{project.link}</a></p>
                                     <p>{project.description}</p>
                                     <p>{project.period}</p>
-                                   
+                                   <button onClick=""></button>
                                 </ProjectBox>
                                 )
                             })

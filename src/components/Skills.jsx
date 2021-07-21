@@ -39,7 +39,7 @@ if(loading) return <div>loading...</div>
             ) : (
                 skills.length && (
                     <SkillsContainer>
-                        <h2>Compétences</h2>
+                        <h2>⚙️ Compétences</h2>
                         {
                             skills.map((skill, index) => {
                                 return(

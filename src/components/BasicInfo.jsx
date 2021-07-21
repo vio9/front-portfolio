@@ -14,6 +14,11 @@ export const BasicInfos = styled.div`
   `;
   
 
+  export const Presentation = styled.p`
+ font-size:1.2em;
+
+  `;
+  
 
 
 
@@ -22,14 +27,7 @@ export default function BasicInfo(){
     const [infos, setInfos] = useState([])
     const [error, setError] = useState(null)
     const [loading, setLoading] = useState(true)
-  /*  useEffect(() => {
-        axios.get('http://localhost:4040/basic_infos')
-        .then(res => {
-            setInfos(res.data)
-        })
-        .catch((err) => setError(err))
-    })  
-    */
+  
     useEffect(()=> {
         const getInfos = async () => {
             try {
@@ -44,10 +42,7 @@ export default function BasicInfo(){
         }
         getInfos()
     }, [])
-    console.log(infos)
-   
     if(loading) return <div>loading...</div>
-    console.log(infos)
 
     return(
         <>
@@ -64,9 +59,9 @@ export default function BasicInfo(){
                     infos.map((info, index) => {
                         return(
                             <BasicInfos key={index}>
-                            <p>👋 {info.presentation}</p>
+                            <Presentation>👋 {info.presentation}</Presentation>
                             <p>📨 Si vous souhaitez me contacter c'est par ici : <a href={"mailto:" + info.email}>{info.email}</a></p>
-                            <p>Actuellement je travaille à distance et à {info.city}</p>
+                            <p>📍Actuellement je travaille à distance et à {info.city}.</p>
                             
                         </BasicInfos>
                         )

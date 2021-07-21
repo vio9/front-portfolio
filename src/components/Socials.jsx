@@ -2,23 +2,20 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 
-
-
 export const SocialContainer = styled.div`
   width:25rem;
   background-color:#E6E9ED;
-  height : 10rem;
+  height : 16rem;
   text-align: left;
-  padding: 10px;
+  padding: 10px 10px 40px 10px;
   `;
   
+export const ImageSocial = styled.img`
+width:40px;
+padding:5px;
+`;  
 
-
-
-
-
-
-export default function BasicInfo(){
+export default function Socials(){
     const [socials, setSocials] = useState([])
     const [error, setError] = useState(null)
     const [loading, setLoading] = useState(true)
@@ -42,6 +39,20 @@ export default function BasicInfo(){
     if(loading) return <div>loading...</div>
     
 
+  /*  const deleteItem = () => {
+        axios.delete(`http://localhost:4040/socials/${id}`)
+        .then((res) =>
+          console.log("Status :", res.status),
+         
+        )
+        .catch(err => {
+          console.error('Something went bad', err)
+          
+        })
+      }
+
+*/
+
     return(
         <>
         {
@@ -51,21 +62,24 @@ export default function BasicInfo(){
                socials.length && (
 
                 <SocialContainer>
+                     <h2>#️⃣ Réseaux sociaux</h2>
                 {
                    socials.map((social, index) => {
                         return(
-                            <div key={index}>
-                        <a href={social.link}>{social.name}</a>
-                    </div>
+                        <div
+                             key={index}
+                             id={social.id}>
+                            <ImageSocial src={social.image} alt="logo social" />    
+                            <p><a href={social.link}>{social.name}</a></p>
+                        </div>
                         )
-                    
                 })
                 }
+                
                 </SocialContainer>
                 )
             )
         }
-       
         </>
     )
 }

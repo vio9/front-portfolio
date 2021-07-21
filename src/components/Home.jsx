@@ -6,10 +6,19 @@ import Intro from './Intro';
 import Skills from './Skills';
 import Experiences from './Experiences';
 import Projects from './Projects';
-
+import Hobbies from './Hobbies';
+import { devices } from '../style/GenericStyles';
 
 export const UpContainer = styled.div`
+@media ${devices.mobile} {
 display:flex;
+flex-direction: column;
+}
+@media ${devices.laptop} {
+display:flex;
+flex-direction: row;
+}
+
 `;
 
 export const BasicContainer = styled.div`
@@ -28,6 +37,7 @@ export default function Home(){
             <Socials />
             <Skills />
             <Formation />
+            <Hobbies />
             </BasicContainer>
             <Experiences />
             <Projects />

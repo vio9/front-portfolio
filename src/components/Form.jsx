@@ -31,10 +31,8 @@ export default function Form(){
         setDatas({
             ...datas,
             [e.target.name] : e.target.value
-    })
+        })
     }
-
-    console.log(datas)
 
     return (
         <>
@@ -45,11 +43,14 @@ export default function Form(){
             placeholder="name"
             type="text"
             name="name"
+            id="input"
             required
         />
       <label>Link</label>
-      <input type='text' name="link" 
-      onChange={onChangeDatas} />
+      <input type='text' name="link" id="input"
+      onChange={() => onChangeDatas} />
+      <label>Lien image</label>
+      <input type="text" name="image" id="input" onChange={onChangeDatas} />
        <button type="submit" value="Submit">submit</button>
        
         </form>

@@ -13,10 +13,17 @@ background-color: #F2F2F2;
 
 export const ExpBox = styled.div`
 @media ${devices.mobile} {
- width:375px;   
+ width:370px;
+ padding:10px; 
+ background-color:#fff;
+border: 0.5px #e0dddd solid;  
+
 }
 @media ${devices.tablet} {
  width:768px;   
+ padding:10px; 
+ background-color:#fff;
+border: 0.5px #e0dddd solid;  
 }
 @media ${devices.laptop} {    
 width:38rem;

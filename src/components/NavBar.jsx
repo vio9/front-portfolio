@@ -16,6 +16,13 @@ box-sizing: border-box;
 text-decoration:none;
 margin:10px 10px 0 30px;
 }
+@media ${devices.tablet} {
+padding: 0.5em 3em;
+border: 0.16em solid #6ab8e6;
+box-sizing: border-box;
+text-decoration:none;
+margin:10px 10px 0 160px;
+}
 
 @media ${devices.laptop} {
 padding: 0.5em 3em;

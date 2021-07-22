@@ -22,7 +22,7 @@ label{
 }
 `;
 
-export default function Form(){
+export default function Form({getSocials}){
 
    const [datas, setDatas] = useState({name:'', link:''})
    const [loading, setLoading] = useState(true)
@@ -35,6 +35,7 @@ export default function Form(){
                 await axios.post('http://localhost:4040/socials',
                 {...datas}
                 )
+                getSocials()
                 toast.success('le réseau social a bien été ajouté!')
             } catch(err) {
                 console.log(err);

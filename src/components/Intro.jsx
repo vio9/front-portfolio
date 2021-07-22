@@ -15,6 +15,16 @@ export const IntroContainer = styled(BasicFlex)`
     display:flex;
     flex-direction: column;
 }
+@media ${devices.tablet} {
+    background-image: url(${land});
+    width:768px;
+    height:400px;
+    font-size:1.3em;
+    color:#fff;
+    padding-top:100px;
+    display:flex;
+    flex-direction: column;
+}
 @media ${devices.laptop} {
 width:100%;
 height:20rem;

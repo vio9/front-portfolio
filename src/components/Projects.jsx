@@ -13,7 +13,7 @@ background-color: #F2F2F2;
 
 export const ProjectBox = styled.div`
 @media ${devices.mobile} {
-width:375px;
+width:370px;
 height:30rem;
 background-color:#fff;
 border: 0.5px #e0dddd solid;
@@ -93,7 +93,6 @@ export default function Projects(){
                                     <p>Lien : <a href={project.link}>{project.link}</a></p>
                                     <p>{project.description}</p>
                                     <p>{project.period}</p>
-                                   <button onClick=""></button>
                                 </ProjectBox>
                                 )
                             })

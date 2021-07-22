@@ -3,6 +3,24 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import styled from 'styled-components';
+
+
+export const TitreForm = styled.h3`
+width:30rem;
+`;
+
+export const FormSocial = styled.form`
+width:80%;
+display:flex;
+justify-content: space-around;
+align-items: center;
+
+label{
+    padding:10px;
+    width:60px;
+}
+`;
 
 export default function Form(){
 
@@ -36,9 +54,9 @@ export default function Form(){
 
     return (
         <>
-        <form onSubmit={handleSubmit}>
-            <label>Name</label>
-        <input
+        <FormSocial onSubmit={handleSubmit}>
+        <TitreForm>Formulaire d'ajout d'un nouveau réseau social : </TitreForm>
+            <label>Nom réseau</label><input
             onChange={onChangeDatas}
             placeholder="name"
             type="text"
@@ -46,14 +64,13 @@ export default function Form(){
             id="input"
             required
         />
-      <label>Link</label>
-      <input type='text' name="link" id="input"
+      <label>lien réseau</label><input type='text' name="link" id="input" placeholder="lien réseau"
       onChange={() => onChangeDatas} />
-      <label>Lien image</label>
-      <input type="text" name="image" id="input" onChange={onChangeDatas} />
+
+      <label>lien image</label><input type="text" name="image" placeholder="lien image" id="input" onChange={onChangeDatas} />
        <button type="submit" value="Submit">submit</button>
        
-        </form>
+        </FormSocial>
     
 
     <ToastContainer

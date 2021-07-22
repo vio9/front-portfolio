@@ -14,8 +14,7 @@ padding: 0.5em 3em;
 border: 0.16em solid #6ab8e6;
 box-sizing: border-box;
 text-decoration:none;
-margin:10px;
-left:10px;
+margin:10px 10px 0 30px;
 }
 
 @media ${devices.laptop} {
@@ -25,6 +24,9 @@ box-sizing: border-box;
 text-decoration:none;
 margin:10px;
 left:10px;
+&:hover {
+    background-color:#fff;
+}
 }
 `;
 

@@ -6,16 +6,23 @@ import styled from 'styled-components'
 import { toast } from 'react-toastify';
 
 export const SocialContainer = styled.div`
-  width:25rem;
   background-color:#E6E9ED;
+  width:50rem;
   text-align: left;
   padding: 10px 10px 40px 10px;
+  margin-left:100px;
   `;
   
 export const ImageSocial = styled.img`
 width:40px;
 padding:5px;
 `;  
+
+export const AdminContainer = styled.div`
+background: linear-gradient(#d8d3d3, #6868eb);
+display:flex;
+flex-direction: column;
+`;
 
 export default function Admin(){
     const [socials, setSocials] = useState([])
@@ -57,10 +64,9 @@ export default function Admin(){
     return(
        
 
-        <>
+        <AdminContainer>
          
         <NavBar />
-        <h2>Formulaire d'ajout d'un nouveau réseau social : </h2>
         <Form />
         {
                socials.length && (
@@ -90,6 +96,6 @@ export default function Admin(){
     
     )
 
-        </>
+        </AdminContainer>
     )
 }

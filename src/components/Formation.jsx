@@ -5,10 +5,16 @@ import styled from 'styled-components';
 
 export const FormationContainer = styled.div`
 width:25rem;
-background-color: #AAB2BD;
+background-color: #d9dce0;
 padding: 10px;
 text-align:left;
+`;
 
+export const FormationBox = styled.div`
+border: solid 0.2px #fff;
+margin:9px;
+padding:4px;
+background-color: #e7e6e6;
 `;
 
 export default function Formation(){
@@ -44,12 +50,12 @@ if(loading) return <div>loading...</div>
                         {
                             formations.map((formation, index) => {
                                 return(
-                                <ul key={index}>
-                                    <li>{formation.title}</li>
-                                    <li>{formation.adress}</li>
-                                    <li>{formation.period}</li>
-                                    <li>{formation.school}</li>
-                                </ul>
+                                <FormationBox key={index}>
+                                    <strong>{formation.title}</strong>
+                                    <p>{formation.adress}</p>
+                                    <p>{formation.period}</p>
+                                    <p>{formation.school}</p>
+                                </FormationBox>
                                 )
                             })
                         }

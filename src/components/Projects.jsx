@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import { TitleRubrique } from '../style/GenericStyles';
+import { devices } from '../style/GenericStyles';
 
 export const ProjectContainer = styled.div`
 display:flex;
@@ -11,6 +12,28 @@ background-color: #F2F2F2;
 `;
 
 export const ProjectBox = styled.div`
+@media ${devices.mobile} {
+width:375px;
+height:30rem;
+background-color:#fff;
+border: 0.5px #e0dddd solid;
+padding:10px;
+margin-left:20px;
+margin-right:20px;
+margin-bottom:20px;
+}
+@media ${devices.tablet} {
+width:768px;
+height:30rem;
+background-color:#fff;
+border: 0.5px #e0dddd solid;
+padding:10px;
+margin-left:20px;
+margin-right:20px;
+margin-bottom:20px;
+}
+
+@media ${devices.laptop} {
 width:35rem;
 height:30rem;
 background-color:#fff;
@@ -19,6 +42,7 @@ padding:10px;
 margin-left:20px;
 margin-right:20px;
 margin-bottom:20px;
+}
 `;
 
 

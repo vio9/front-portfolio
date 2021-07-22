@@ -12,7 +12,7 @@ import { devices } from '../style/GenericStyles';
 export const UpContainer = styled.div`
 @media ${devices.mobile} {
 display:flex;
-flex-direction: column;
+flex-direction: column-reverse;
 }
 @media ${devices.laptop} {
 display:flex;

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import { TitleRubrique } from '../style/GenericStyles';
-
+import { devices } from '../style/GenericStyles';
 
 export const ExpContainer = styled.div`
 display:flex;
@@ -12,6 +12,13 @@ background-color: #F2F2F2;
 `;
 
 export const ExpBox = styled.div`
+@media ${devices.mobile} {
+ width:375px;   
+}
+@media ${devices.tablet} {
+ width:768px;   
+}
+@media ${devices.laptop} {    
 width:38rem;
 height:25rem;
 background-color:#fff;
@@ -19,6 +26,7 @@ border: 0.5px #e0dddd solid;
 padding:10px;
 margin-left:20px;
 margin-bottom:20px;
+}
 `;
 
 

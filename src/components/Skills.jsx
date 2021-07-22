@@ -10,6 +10,13 @@ padding: 10px;
 text-align:left;
 `;
 
+export const SkillsBox = styled.div`
+border: solid 0.2px #fff;
+margin:9px;
+padding:4px;
+background-color: #e7e6e6;
+`;
+
 export default function Formation(){
 const [skills, setSkills] = useState([])
 const [error, setError] = useState(null)
@@ -43,10 +50,10 @@ if(loading) return <div>loading...</div>
                         {
                             skills.map((skill, index) => {
                                 return(
-                                <div key={index}>
+                                <SkillsBox key={index}>
                                     <h4>{skill.title}</h4>
                                     <p>{skill.description}</p>
-                                </div>
+                                </SkillsBox>
                                 )
                             })
                         }
